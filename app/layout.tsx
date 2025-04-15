@@ -1,7 +1,5 @@
 import {PropsWithChildren}from "react"
 import {Metadata} from "next"
-
-
 export const metadata: Metadata = {
   title: "Cobalt — Everything About The Essential Metal",
   description:
@@ -11,9 +9,16 @@ export const metadata: Metadata = {
     description:
       "Explore the fascinating world of cobalt. From its role in clean energy to cutting-edge technology, Cobalt is your guide to this powerful metal.",
     images: {
-      url: "/image.png",
+      url: "/og-card.png",
       width: 1200,
       height: 628,
     },
   },
+};
+export default (props: PropsWithChildren) => {
+  return (
+    <html>
+      <body>{props.children}</body>
+    </html>
+  );
 };
